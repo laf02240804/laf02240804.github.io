@@ -117,9 +117,49 @@
 		
             
 		
+            
+		
         
         <!-- render other articles -->
         
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2017-03-26 </div>
+			<div class="article-title"><a href="/2017/03/26/grails-rest-helper/" >Grails3 Restful 入门</a></div>						
+		</h3>
+	
+
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<h3 id="&#x524D;&#x8A00;"><a href="#&#x524D;&#x8A00;" class="headerlink" title="&#x524D;&#x8A00;"></a>&#x524D;&#x8A00;</h3><p>&#x2003;&#x2003;Grails&#x662F;&#x8FD0;&#x884C;&#x5728;JVM&#x4E4B;&#x4E0A;&#xFF0C;&#x6210;&#x719F;&#x7A33;&#x5B9A;&#x7684;JEE&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x3002;&#x4E0E;&#x65F6;&#x4E0B;&#x6D41;&#x884C;&#x7684;Python&#x3001;NodeJs&#x76F8;&#x6BD4;&#x5728;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x4E0D;&#x8F93;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x540C;&#x65F6;&#x62E5;&#x6709;&#x6027;&#x80FD;&#x4E0A;&#x7684;&#x4F18;&#x52BF;&#x3002;IDEA&#x4E2D;&#x7684;Grails&#x63D2;&#x4EF6;&#x6781;&#x5927;&#x5F25;&#x8865;&#x4E86;&#x7F3A;&#x4E4F;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x8FD9;&#x4E00;&#x4E0D;&#x8DB3;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x5BF9;&#x4E8E;&#x201C;&#x5168;&#x6808;&#x201D;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#xFF0C;&#x9009;&#x62E9;Grails&#x610F;&#x5473;&#x7740;&#x4F60;&#x7684;&#x6280;&#x672F;&#x6808;&#x5C06;&#x4F1A;&#x663E;&#x5F97;&#x76F8;&#x5BF9;&#x81C3;&#x80BF;&#x3002;&#x53E6;&#x5916;&#xFF0C;Grails&#x4E2D;&#x6587;&#x8D44;&#x6599;&#x76F8;&#x5BF9;&#x6B20;&#x7F3A;&#x3002;</p>
+<h3 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h3><p>&#x2003;&#x2003;Grails&#x9700;&#x8981;JDK1.7&#x4EE5;&#x4E0A;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x76EE;&#x524D;&#x6700;&#x65B0;&#x7684;Grails3.2.7&#x5728;Tomcat7.x&#x7684;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x8DD1;&#x8D77;&#x6765;&#x6709;&#x70B9;&#x8270;&#x96BE;&#x3002;&#x63A8;&#x8350;&#x4F7F;&#x7528;Tomcat8.5.x+&#x3002;<br>&#x2003;&#x2003;&#x5B98;&#x65B9;&#x63A8;&#x8350;&#x4F7F;&#x7528;sdkman&#x5B89;&#x88C5;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x662F;mac&#x7CFB;&#x7EDF;&#xFF0C;&#x4E60;&#x60EF;&#x4F7F;&#x7528;Homebrew&#x7BA1;&#x7406;&#x8F6F;&#x4EF6;&#x3002;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x811A;&#x672C;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ brew install grails</div></pre></td></tr></table></figure></p>
+<p>&#x6267;&#x884C; grails -v &#x811A;&#x672C;&#x68C0;&#x67E5;&#x5B89;&#x88C5;&#x662F;&#x5426;&#x6210;&#x529F;&#x3002;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ grails -v</div><div class="line"></div><div class="line">| Grails Version: 3.2.4</div><div class="line">| Groovy Version: 2.4.7</div><div class="line">| JVM Version: 1.8.0_77</div></pre></td></tr></table></figure></p>
+<h3 id="&#x521B;&#x5EFA;&#x57FA;&#x4E8E;Grails&#x7684;restful&#x5E94;&#x7528;"><a href="#&#x521B;&#x5EFA;&#x57FA;&#x4E8E;Grails&#x7684;restful&#x5E94;&#x7528;" class="headerlink" title="&#x521B;&#x5EFA;&#x57FA;&#x4E8E;Grails&#x7684;restful&#x5E94;&#x7528;"></a>&#x521B;&#x5EFA;&#x57FA;&#x4E8E;Grails&#x7684;restful&#x5E94;&#x7528;</h3><p>&#x2003;&#x2003;Grails&#x7531;Ruby&#x7684;rails&#x800C;&#x6765;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x652F;&#x6301;rails&#x7684;&#x8BF8;&#x591A;&#x4F18;&#x70B9;&#x3002;&#x652F;&#x6301;&#x547D;&#x4EE4;&#x884C;&#x5F62;&#x5F0F;&#x521B;&#x5EFA;&#x5E94;&#x7528;&#x3002;&#x521B;&#x5EFA;&#x5E94;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x811A;&#x672C;&#x53EF;&#x53C2;&#x8003;<a href="&apos;http://docs.grails.org/latest/ref/Command%20Line/create-app.html&apos;">&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#x3002;&#x8FD9;&#x91CC;&#x53EA;&#x4ECB;&#x7ECD;restful&#x5E94;&#x7528;&#x3002;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ grails create-app api-name --profile rest-api --features hibernate</div></pre></td></tr></table></figure></p>
+<p>&#x6267;&#x884C;&#x521B;&#x5EFA;&#x547D;&#x4EE4;&#x540E;&#xFF0C;Grails&#x73AF;&#x5883;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x751F;&#x6210;&#x4EE5;&#x201C;api-name&#x201D;&#x4E3A;&#x76EE;&#x5F55;&#x540D;&#x7684;&#x9879;&#x76EE;&#x7A0B;&#x5E8F;&#x5305;&#x3002;&#x7528;IDEA&#x6253;&#x5F00;&#x9879;&#x76EE;&#x3002;<br><br><br><img src="/2017/03/26/grails-rest-helper/./grails-rest-helper/grails1.png" alt="">  </p>
+<h3 id="&#x5751;"><a href="#&#x5751;" class="headerlink" title="&#x5751;"></a>&#x5751;</h3><p>&#x2003;&#x2003;&#x5982;&#x4F55;&#x4F7F;&#x7528;Grails&#x5F00;&#x53D1;restful&#x5E94;&#x7528;&#x8FD9;&#x91CC;&#x4E0D;&#x8C08;&#xFF0C;&#x76F8;&#x5173;&#x77E5;&#x8BC6;&#x53EF;&#x4EE5;&#x53C2;&#x9605;<a href="http://guides.grails.org/rest-hibernate/guide/index.html" target="_blank" rel="external">&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x53EA;&#x8BA8;&#x8BBA;&#x9047;&#x5230;&#x7684;&#x5751;&#x3002; Grails&#x5B98;&#x65B9;&#x6587;&#x6863;&#x521B;&#x5EFA;&#x7684;rest&#x5E94;&#x7528;&#x53EA;&#x662F;&#x6700;&#x57FA;&#x672C;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x65E0;&#x6CD5;&#x9002;&#x7528;&#x4E8E;&#x5546;&#x4E1A;&#x9879;&#x76EE;&#x3002;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;&#x9879;&#x76EE;&#x8FDB;&#x884C;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x7684;&#x91CD;&#x6784;&#x3002;   </p>
+<ul>
+<li><p>&#x4F20;&#x8F93;&#x53C2;&#x6570;<br>&#x6709;&#x65F6;&#x7531;&#x4E8E;&#x4E1A;&#x52A1;&#x9700;&#x8981;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;restful&#x63A5;&#x53E3;&#x7684;&#x4F20;&#x8F93;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x52A0;&#x89E3;&#x5BC6;&#x3002;&#x5B9E;&#x73B0;&#x529E;&#x6CD5;&#x662F;&#xFF0C;&#x91CD;&#x5199;controller&#x7684;&#x57FA;&#x7C7B;RestfulController&#x7684;getObjectToBind&#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x5904;&#x7406;&#x540E;&#x7684;&#x53C2;&#x6570;&#x6253;&#x5305;&#x6210;map&#x8FDB;&#x884C;&#x8FD4;&#x56DE;&#x3002;   </p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Override</span></div><div class="line"><span class="keyword">def</span> getObjectToBind() {</div><div class="line">    <span class="keyword">def</span> param1 = request.getParameter <span class="string">&apos;p1&apos;</span></div><div class="line">    <span class="keyword">def</span> param2 = request.getParameter <span class="string">&apos;p2&apos;</span></div><div class="line">    <span class="comment">/*   &#x52A0;&#x5BC6;&#x89E3;&#x5BC6;&#x5904;&#x7406;param1 param2   */</span></div><div class="line"></div><div class="line">    [<span class="string">&apos;p1&apos;</span>: param1, <span class="string">&apos;p2&apos;</span>: param2] <span class="comment">// &#x8FD4;&#x56DE;&#x5904;&#x7406;&#x540E;&#x7684;&#x53C2;&#x6570;</span></div><div class="line">}</div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x9519;&#x8BEF;json&#x4FE1;&#x606F;&#x5904;&#x7406;<br>&#x5BF9;&#x4E8E;restful api&#x8C03;&#x7528;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x9519;&#x8BEF;&#xFF0C;Grails&#x81EA;&#x884C;&#x8FDB;&#x884C;&#x4E86;&#x5904;&#x7406;&#xFF0C;&#x5E76;&#x4EE5;json&#x6216;xml&#x683C;&#x5F0F;&#x6587;&#x672C;&#x5BF9;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x884C;&#x4E86;&#x54CD;&#x5E94;&#x3002;&#x8FD9;&#x4E5F;&#x663E;&#x7136;&#x4E0D;&#x80FD;&#x6EE1;&#x8DB3;&#x9879;&#x76EE;&#x9700;&#x6C42;&#xFF0C;&#x5546;&#x4E1A;&#x9879;&#x76EE;&#x4E2D;&#x6709;&#x65F6;&#x4F1A;&#x5BF9;&#x51E0;&#x4E2A;&#x7AEF;&#x7684;&#x9519;&#x8BEF;&#x5B9A;&#x5236;&#x67D0;&#x79CD;&#x7EA6;&#x5B9A;&#xFF0C;&#x8BBE;&#x8BA1;&#x76F8;&#x5E94;&#x7684;&#x9519;&#x8BEF;&#x7801;&#x6765;&#x6807;&#x8BC6;&#x7279;&#x5B9A;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x9519;&#x8BEF;&#x3002;&#x6240;&#x4EE5;&#x5BF9;&#x8FD4;&#x56DE;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x9700;&#x8981;&#x6539;&#x9020;&#x3002;&#x5B98;&#x65B9;&#x7ED9;&#x51FA;&#x65B9;&#x6848;&#x662F;&#x81EA;&#x5B9A;&#x4E49;grails.rest.render.errors.VndErrorJsonRenderer&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5E76;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;resources.groovy&#x4E2D;&#x914D;&#x7F6E;&#x5373;&#x53EF;&#x3002;&#x5373;:<br>If you wish to change the format to Vnd.Error then simply register grails.rest.render.errors.VndErrorJsonRenderer bean in grails-app/conf/spring/resources.groovy:</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">beans = {</div><div class="line">    <span class="comment">// for Vnd.Error JSON format</span></div><div class="line">    vndJsonErrorRenderer(grails.rest.render.errors.VndErrorJsonRenderer)</div><div class="line">    <span class="comment">// for Vnd.Error XML format</span></div><div class="line">    vndXmlErrorRenderer(grails.rest.render.errors.VndErrorXmlRenderer)</div><div class="line">}</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&#x2003;&#x2003;&#x4E0D;&#x5E78;&#x7684;&#x662F;&#x8FD9;&#x4E48;&#x505A;&#x662F;&#x65E0;&#x6548;&#x7684;&#x3002;&#x901A;&#x8FC7;&#x8DDF;&#x8E2A;&#x6E90;&#x7801;&#xFF0C;&#x53D1;&#x73B0;&#x5176;&#x5B9E;Grails&#x5904;&#x7406;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x662F;&#x901A;&#x8FC7;views&#x6A21;&#x5757;&#x4E2D;&#x7684;errors/_errors.gson&#x6A21;&#x677F;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x53EF;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x6B64;&#x6587;&#x4EF6;&#x6765;&#x5B9A;&#x5236;&#x81EA;&#x5DF1;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;json&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#x3002;&#x9ED8;&#x8BA4;&#x7684;&#x9519;&#x8BEF;message&#x662F;&#x5728;&#x201C;i18n&#x201D;&#x6A21;&#x5757;&#x4E2D;&#x76F8;&#x5E94;&#x7684;messages.properties&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x3002;</p>
+<h3 id="&#x7ED3;&#x675F;"><a href="#&#x7ED3;&#x675F;" class="headerlink" title="&#x7ED3;&#x675F;"></a>&#x7ED3;&#x675F;</h3><p>&#x2003;&#x2003;&#x81EA;&#x6B64;&#xFF0C;Grails-Restful-Api&#x53EF;&#x4EE5;&#x9002;&#x5E94;&#x5927;&#x90E8;&#x5206;&#x7684;restful&#x5F00;&#x53D1;&#x4E86;&#x3002;Grails&#x76F8;&#x5BF9;&#x4E8E;&#x65F6;&#x4E0B;&#x6700;&#x706B;&#x7684;NodeJs&#x6709;&#x7740;&#x65E0;&#x6CD5;&#x6BD4;&#x62DF;&#x7684;&#x6027;&#x80FD;&#x4F18;&#x52BF;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x5BF9;&#x6027;&#x80FD;&#x8981;&#x6C42;&#x6781;&#x9AD8;&#x7684;&#x6A21;&#x5757;&#x548C;&#x9879;&#x76EE;&#x5979;&#x4E5F;&#x662F;&#x65E0;&#x80FD;&#x4E3A;&#x529B;&#x7684;&#xFF0C;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x7528;Java&#x8BED;&#x8A00;&#x6DF7;&#x7F16;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x9884;&#x89C1;&#xFF0C;&#x6548;&#x679C;&#x4E0D;&#x4F1A;&#x592A;&#x663E;&#x8457;&#x3002;&#x5EFA;&#x8BAE;&#x901A;&#x8FC7;&#x4F7F;&#x7528;Java+Rersey2&#x8FDB;&#x884C;&#x539F;&#x751F;&#x5F00;&#x53D1;&#xFF0C;&#x6452;&#x5F03;&#x4E00;&#x5207;&#x5F00;&#x6E90;&#x6846;&#x67B6;&#xFF0C;&#x5B8C;&#x5168;&#x8F7B;&#x91CF;&#x7EA7;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x5F00;&#x53D1;restful&#x9879;&#x76EE;&#xFF0C;&#x9700;&#x8981;&#x5BF9;restful&#x6709;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x7684;&#x4E86;&#x89E3;&#x3002;ok&#xFF0C;&#x795D;&#x5927;&#x5BB6;&#x6109;&#x5FEB;&#x3002;</p>
+
+	
+	</div>
+</div>
+
+           
+		
            
 			  
 	
@@ -524,7 +564,7 @@
 			
   <div id="site_search">
    <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Busca" class="st-search-input st-default-search-input form-control"/>
    </div>  
   <div id="local-search-result"></div>
   </div>
@@ -533,14 +573,14 @@
 		
 			
 	<div class="widget">
-		<h4>Categories</h4>
+		<h4>Categorias</h4>
 		<ul class="tag_box inline list-unstyled">
 		
 			<li><a href="/categories/数学/">数学<span>1</span></a></li>
 		
 			<li><a href="/categories/游戏/">游戏<span>2</span></a></li>
 		
-			<li><a href="/categories/编程/">编程<span>4</span></a></li>
+			<li><a href="/categories/编程/">编程<span>5</span></a></li>
 		
 		</ul>
 	</div>
@@ -551,13 +591,15 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/读书笔记/">读书笔记<span>1</span></a></li>
+			<li><a href="/tags/Groovy-Grails/">Groovy Grails<span>1</span></a></li>
+		
+			<li><a href="/tags/Java/">Java<span>1</span></a></li>
 		
 			<li><a href="/tags/hexo/">hexo<span>2</span></a></li>
 		
 			<li><a href="/tags/ssh/">ssh<span>1</span></a></li>
 		
-			<li><a href="/tags/Java/">Java<span>1</span></a></li>
+			<li><a href="/tags/读书笔记/">读书笔记<span>1</span></a></li>
 		
 			<li><a href="/tags/Dos/">Dos<span>2</span></a></li>
 		
@@ -569,8 +611,12 @@
 		
 			
 <div class="widget">
-  <h4>Recent Posts</h4>
+  <h4>Posts recentes</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2017/03/26/grails-rest-helper/" ><i class="fa fa-file-o"></i>Grails3 Restful 入门</a>
+      </li>
     
       <li>
         <a href="/2016/11/14/hero3-map/" ><i class="fa fa-file-o"></i>侠客英雄传3 地图</a>
@@ -586,10 +632,6 @@
     
       <li>
         <a href="/2016/10/28/zero-trigger-thinking/" ><i class="fa fa-file-o"></i>关于0的思考</a>
-      </li>
-    
-      <li>
-        <a href="/2016/10/23/simple-java-vim-ide/" ><i class="fa fa-file-o"></i>无废话搭建简易的Java开发环境</a>
       </li>
     
   </ul>
@@ -622,7 +664,7 @@
   </div>
   <div class="container-narrow">
   <footer> <p>
-  &copy; 2016 John Doe
+  &copy; 2017 John Doe
   
       with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
 </p> </footer>
